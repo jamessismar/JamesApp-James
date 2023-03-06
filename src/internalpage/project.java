@@ -1,10 +1,13 @@
+package internalpage;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+import myApp.dashboardpage;
 import java.awt.Color;
 import internalpage.*;
-import internalpage.dashboardpage.*;
+import myApp.dashboardpage.*;
 /**
  *
  * @author James
@@ -39,6 +42,9 @@ public class project extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         reportpane = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        account = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
         settings = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -47,7 +53,7 @@ public class project extends javax.swing.JFrame {
         jToolBar1.setRollover(true);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(760, 420));
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setLayout(null);
@@ -78,7 +84,7 @@ public class project extends javax.swing.JFrame {
         jLabel1.setText("    USERPAGE");
         userpane.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, 20));
 
-        navbar.add(userpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 130, 40));
+        navbar.add(userpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 130, 40));
 
         dashpane.setBackground(new java.awt.Color(102, 204, 255));
         dashpane.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -98,7 +104,7 @@ public class project extends javax.swing.JFrame {
         jLabel2.setText("   DASHBOARD");
         dashpane.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, 20));
 
-        navbar.add(dashpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 130, 40));
+        navbar.add(dashpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 130, 40));
 
         reportpane.setBackground(new java.awt.Color(102, 204, 255));
         reportpane.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -115,7 +121,29 @@ public class project extends javax.swing.JFrame {
         jLabel3.setText("      REPORT");
         reportpane.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, -1));
 
-        navbar.add(reportpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 130, 40));
+        account.setBackground(new java.awt.Color(102, 204, 255));
+        account.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                accountMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                accountMouseExited(evt);
+            }
+        });
+        account.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel4.setText("      REPORT");
+        account.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, -1));
+
+        reportpane.add(account, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 130, 40));
+
+        navbar.add(reportpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 130, 40));
+
+        jLabel6.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("ACCOUNT");
+        navbar.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 110, -1));
 
         jPanel1.add(navbar);
         navbar.setBounds(0, 0, 130, 420);
@@ -205,8 +233,9 @@ public class project extends javax.swing.JFrame {
     }//GEN-LAST:event_reportpaneMouseExited
 
     private void userpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userpaneMouseClicked
-     userPage up = new userPage();
+     userpage1 up = new userpage1();
      maindesktop.add(up).setVisible(true);
+     this.dispose();
     }//GEN-LAST:event_userpaneMouseClicked
 
     private void dashpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpaneMouseClicked
@@ -230,6 +259,14 @@ public class project extends javax.swing.JFrame {
         settingpage set = new settingpage();
         maindesktop.add(set).setVisible(true);
     }//GEN-LAST:event_settingsMouseClicked
+
+    private void accountMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_accountMouseEntered
+
+    private void accountMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_accountMouseExited
 
     /**
      * @param args the command line arguments
@@ -267,12 +304,15 @@ public class project extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel account;
     private javax.swing.JPanel dashpane;
     private javax.swing.JPanel header;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JDesktopPane maindesktop;

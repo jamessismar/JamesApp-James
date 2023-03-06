@@ -1,8 +1,12 @@
+package myApp;
 
 
+
+import internalpage.project;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import javax.swing.BorderFactory;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 /*
@@ -21,9 +25,10 @@ public class loginform extends javax.swing.JFrame {
      */
     public loginform() {
         initComponents();
+       setLocationRelativeTo(null); 
     }
-    Color hover = new Color(102,102,255);
-    Color defbutton = new Color(140,104,141);
+    Color hover = new Color(0,255,153);
+    Color defbutton = new Color(102,255,102);
     
     Border empty = BorderFactory.createEmptyBorder();
     
@@ -63,11 +68,14 @@ public class loginform extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        minimize = new javax.swing.JLabel();
+        close = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setLayout(null);
 
@@ -145,6 +153,26 @@ public class loginform extends javax.swing.JFrame {
         jLabel6.setText("Don't have an account?");
         jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 220, -1));
 
+        minimize.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        minimize.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        minimize.setText("—");
+        minimize.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                minimizeMouseClicked(evt);
+            }
+        });
+        jPanel4.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 30, -1));
+
+        close.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        close.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        close.setText("x");
+        close.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closeMouseClicked(evt);
+            }
+        });
+        jPanel4.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, 20, -1));
+
         jPanel1.add(jPanel4);
         jPanel4.setBounds(320, 0, 440, 420);
 
@@ -207,6 +235,17 @@ public class loginform extends javax.swing.JFrame {
         proj.setVisible(true);
     }//GEN-LAST:event_jLabel4MouseClicked
 
+    private void minimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizeMouseClicked
+     setState(ICONIFIED);
+    }//GEN-LAST:event_minimizeMouseClicked
+
+    private void closeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseClicked
+        int a = JOptionPane.showConfirmDialog(null,"Confirm Exit?");
+        if (a == JOptionPane.YES_OPTION){
+        System.exit(0);
+    }
+    }//GEN-LAST:event_closeMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -244,6 +283,7 @@ public class loginform extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel cancel;
+    private javax.swing.JLabel close;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -254,6 +294,7 @@ public class loginform extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel login;
+    private javax.swing.JLabel minimize;
     private javax.swing.JTextField password;
     private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables

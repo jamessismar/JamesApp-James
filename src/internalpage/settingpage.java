@@ -1,27 +1,32 @@
+package internalpage;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
-package internalpage;
+
+import myApp.loginform;
 import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
+
 /**
  *
  * @author James
  */
-public class dashboardpage extends javax.swing.JInternalFrame {
+public class settingpage extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form dashboardpage
+     * Creates new form settingpage
      */
-    public dashboardpage() {
+    public settingpage() {
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI bi= (BasicInternalFrameUI)this.getUI();
         bi.setNorthPane(null);
-        
-        
     }
+    
      Color navcolor = new Color(102,204,255);
      Color headcolor = new Color(0,255,153);
      Color bodycolor = new Color(102,255,102);
@@ -42,13 +47,18 @@ public class dashboardpage extends javax.swing.JInternalFrame {
         report = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        settings = new javax.swing.JPanel();
+        logout = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -68,16 +78,16 @@ public class dashboardpage extends javax.swing.JInternalFrame {
         manageuser.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-admin-settings-male-100.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/edit profile.png"))); // NOI18N
         manageuser.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 100));
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("MANAGE USER");
+        jLabel4.setText("EDIT PROFILE");
         manageuser.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 100, -1));
 
         jPanel2.add(manageuser);
-        manageuser.setBounds(20, 40, 140, 140);
+        manageuser.setBounds(40, 40, 140, 140);
 
         report.setBackground(new java.awt.Color(102, 204, 255));
         report.setPreferredSize(new java.awt.Dimension(160, 160));
@@ -103,63 +113,94 @@ public class dashboardpage extends javax.swing.JInternalFrame {
         jPanel2.add(report);
         report.setBounds(240, 40, 140, 140);
 
-        settings.setBackground(new java.awt.Color(102, 204, 255));
-        settings.setPreferredSize(new java.awt.Dimension(160, 160));
-        settings.addMouseListener(new java.awt.event.MouseAdapter() {
+        logout.setBackground(new java.awt.Color(102, 204, 255));
+        logout.setPreferredSize(new java.awt.Dimension(160, 160));
+        logout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                settingsMouseEntered(evt);
+                logoutMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                settingsMouseExited(evt);
+                logoutMouseExited(evt);
             }
         });
-        settings.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        logout.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/settings.png"))); // NOI18N
-        settings.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 100));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/log out.png"))); // NOI18N
+        logout.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 150, 100));
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("SETTINGS");
-        settings.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 100, -1));
+        jLabel8.setText("LOGOUT");
+        logout.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 100, -1));
 
-        jPanel2.add(settings);
-        settings.setBounds(450, 40, 140, 140);
+        jPanel2.add(logout);
+        logout.setBounds(440, 40, 140, 140);
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 690, 260));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 640, 250));
 
-        jPanel1.setBackground(new java.awt.Color(0, 255, 153));
+        jPanel1.setBackground(new java.awt.Color(0, 255, 0));
         jPanel1.setLayout(null);
 
         jPanel3.setBackground(new java.awt.Color(102, 204, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jPanel3);
-        jPanel3.setBounds(460, 0, 130, 120);
 
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("USER NAME");
+        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 120, -1));
+
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/user.png"))); // NOI18N
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 100));
+
+        jPanel1.add(jPanel3);
+        jPanel3.setBounds(470, 0, 140, 140);
+
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel1.setText("RURAL BANK OF BACONG PAYROLL SYSTEM");
+        jLabel1.setText("ACCOUNT SETTINGS");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(10, -20, 300, 50);
+        jLabel1.setBounds(10, 0, 180, 30);
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel2.setText("PAYROLL SYSTEM");
+        jLabel2.setText("ADDRESS USER ADDRESS LOCATION");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(10, 30, 180, 20);
+        jLabel2.setBounds(10, 110, 210, 20);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 120));
+        jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel9.setText("ACCOUNT NAME: ");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(10, 40, 180, 20);
+
+        jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel10.setText("POSITION ADMINISTRATOR");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(10, 60, 180, 20);
+
+        jLabel11.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel11.setText("EMAIL : USER.EMAIL");
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(10, 80, 180, 20);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 140));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void manageuserMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageuserMouseEntered
-        manageuser.setBackground(bodycolor);
+      manageuser.setBackground(bodycolor);
     }//GEN-LAST:event_manageuserMouseEntered
 
     private void manageuserMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageuserMouseExited
-        manageuser.setBackground(headcolor);
+    manageuser.setBackground(headcolor);
     }//GEN-LAST:event_manageuserMouseExited
 
     private void reportMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reportMouseEntered
@@ -170,17 +211,30 @@ public class dashboardpage extends javax.swing.JInternalFrame {
         report.setBackground(headcolor);
     }//GEN-LAST:event_reportMouseExited
 
-    private void settingsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsMouseEntered
-        settings.setBackground(bodycolor);
-    }//GEN-LAST:event_settingsMouseEntered
+    private void logoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseEntered
+        logout.setBackground(bodycolor);
+    }//GEN-LAST:event_logoutMouseEntered
 
-    private void settingsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsMouseExited
-        settings.setBackground(headcolor);
-    }//GEN-LAST:event_settingsMouseExited
+    private void logoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseExited
+         logout.setBackground(headcolor);
+    }//GEN-LAST:event_logoutMouseExited
+
+    private void logoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseClicked
+     JFrame mainFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
+     mainFrame.dispose();
+     
+     loginform lf = new loginform();
+     lf.setVisible(true);
+     
+    }//GEN-LAST:event_logoutMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -188,11 +242,12 @@ public class dashboardpage extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel logout;
     private javax.swing.JPanel manageuser;
     private javax.swing.JPanel report;
-    private javax.swing.JPanel settings;
     // End of variables declaration//GEN-END:variables
 }
