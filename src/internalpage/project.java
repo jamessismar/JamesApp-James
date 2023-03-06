@@ -44,8 +44,6 @@ public class project extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         account = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
         settings = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -82,7 +80,8 @@ public class project extends javax.swing.JFrame {
         userpage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel1.setText("    USERPAGE");
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("ACCOUNT");
         userpage.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, 20));
 
         navbar.add(userpage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 130, 40));
@@ -140,16 +139,6 @@ public class project extends javax.swing.JFrame {
         reportpane.add(account, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 130, 40));
 
         navbar.add(reportpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 130, 40));
-
-        jPanel2.setBackground(new java.awt.Color(102, 204, 255));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel7.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("ACCOUNT");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 110, 20));
-
-        navbar.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 110, 40));
 
         jPanel1.add(navbar);
         navbar.setBounds(0, 0, 130, 420);
@@ -318,9 +307,7 @@ public class project extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JDesktopPane maindesktop;
     private javax.swing.JPanel navbar;
