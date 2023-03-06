@@ -1,24 +1,30 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package internalpage;
-import java.awt.Color;
-import myApp.workerForm1;
 
+import java.awt.Color;
+import javax.swing.plaf.basic.BasicInternalFrameUI;
+
+import myApp.workerForm1;
+import myApp.workform;
 /**
  *
  * @author James
  */
-public class userpage1 extends javax.swing.JFrame {
-     private Color headcolor;
+public class userpage extends javax.swing.JInternalFrame {
+    private Color headcolor;
     private Color navcolor;
     private Color bodycolor;
     /**
-     * Creates new form userpage1
+     * Creates new form userpage
      */
-    public userpage1() {
+    public userpage() {
         initComponents();
+      this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
+        BasicInternalFrameUI bi= (BasicInternalFrameUI)this.getUI();
+        bi.setNorthPane(null);
     }
 
     /**
@@ -45,8 +51,6 @@ public class userpage1 extends javax.swing.JFrame {
         search = new javax.swing.JTextField();
         search_button = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(102, 255, 102));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -184,6 +188,12 @@ public class userpage1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
+        workform wff = new workform();
+        wff.setVisible(true);
+        
+    }//GEN-LAST:event_addMouseClicked
+
     private void addMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseEntered
         add.setBackground(bodycolor);
     }//GEN-LAST:event_addMouseEntered
@@ -220,46 +230,6 @@ public class userpage1 extends javax.swing.JFrame {
         search_button.setBackground(navcolor);
     }//GEN-LAST:event_search_buttonMouseExited
 
-    private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
-        workerForm1 wf = new workerForm1(); 
-        wf.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_addMouseClicked
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(userpage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(userpage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(userpage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(userpage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new userpage1().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel add;
