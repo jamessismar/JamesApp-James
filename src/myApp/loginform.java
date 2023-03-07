@@ -26,6 +26,7 @@ public class loginform extends javax.swing.JFrame {
     public loginform() {
         initComponents();
        setLocationRelativeTo(null); 
+       
     }
     Color hover = new Color(0,255,153);
     Color defbutton = new Color(102,255,102);
@@ -66,13 +67,13 @@ public class loginform extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         login = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         minimize = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -124,6 +125,9 @@ public class loginform extends javax.swing.JFrame {
 
         login.setBackground(new java.awt.Color(102, 255, 255));
         login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 loginMouseEntered(evt);
             }
@@ -145,14 +149,6 @@ public class loginform extends javax.swing.JFrame {
 
         jPanel4.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 140, 40));
 
-        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel5.setText("REGISTER HERE");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 120, -1));
-
-        jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel6.setText("Don't have an account?");
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 220, -1));
-
         minimize.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         minimize.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         minimize.setText("—");
@@ -173,6 +169,11 @@ public class loginform extends javax.swing.JFrame {
         });
         jPanel4.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, 20, -1));
 
+        jLabel7.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("WELCOME");
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 140, -1));
+
         jPanel1.add(jPanel4);
         jPanel4.setBounds(320, 0, 440, 420);
 
@@ -185,8 +186,13 @@ public class loginform extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("WELCOME TO BACONG");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 260, -1));
+        jLabel1.setText("SYSTEM");
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 260, -1));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("WELCOME TO BACONG");
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 260, -1));
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(0, 0, 320, 420);
@@ -230,9 +236,7 @@ public class loginform extends javax.swing.JFrame {
     }//GEN-LAST:event_loginMouseExited
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        project proj = new project(); 
-        this.dispose();
-        proj.setVisible(true);
+    
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void minimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizeMouseClicked
@@ -245,6 +249,12 @@ public class loginform extends javax.swing.JFrame {
         System.exit(0);
     }
     }//GEN-LAST:event_closeMouseClicked
+
+    private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
+           project proj = new project(); 
+        this.dispose();
+        proj.setVisible(true);
+    }//GEN-LAST:event_loginMouseClicked
 
     /**
      * @param args the command line arguments
@@ -289,7 +299,7 @@ public class loginform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;

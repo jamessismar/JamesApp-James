@@ -7,7 +7,7 @@ package internalpage;
 import java.awt.Color;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
-import myApp.workerForm1;
+
 import myApp.workform;
 /**
  *
@@ -65,7 +65,7 @@ public class userpage extends javax.swing.JInternalFrame {
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel1.setText("WORKER");
+        jLabel1.setText("EMPLOYEE");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(10, 0, 180, 30);
 
@@ -76,12 +76,13 @@ public class userpage extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "Employee", "Salary", "Hour", "Payroll"
+                "Employee", "Hour", "Payroll"
             }
         ));
         jTable1.setColumnSelectionAllowed(true);
         jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
+        jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 640, 280));
 

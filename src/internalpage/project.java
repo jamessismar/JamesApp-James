@@ -8,6 +8,7 @@ import myApp.dashboardpage;
 import java.awt.Color;
 import internalpage.*;
 import myApp.dashboardpage.*;
+import myApp.reportpage;
 /**
  *
  * @author James
@@ -108,6 +109,9 @@ public class project extends javax.swing.JFrame {
 
         reportpane.setBackground(new java.awt.Color(102, 204, 255));
         reportpane.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                reportpaneMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 reportpaneMouseEntered(evt);
             }
@@ -262,6 +266,11 @@ public class project extends javax.swing.JFrame {
     private void accountMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountMouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_accountMouseExited
+
+    private void reportpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reportpaneMouseClicked
+     reportpage rpp = new reportpage();
+        maindesktop.add(rpp).setVisible(true);
+    }//GEN-LAST:event_reportpaneMouseClicked
 
     /**
      * @param args the command line arguments
