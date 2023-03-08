@@ -200,7 +200,7 @@ public class settingpage extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_manageuserMouseEntered
 
     private void manageuserMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageuserMouseExited
-    manageuser.setBackground(headcolor);
+    manageuser.setBackground( navcolor);
     }//GEN-LAST:event_manageuserMouseExited
 
     private void reportMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reportMouseEntered
@@ -208,7 +208,7 @@ public class settingpage extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_reportMouseEntered
 
     private void reportMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reportMouseExited
-        report.setBackground(headcolor);
+        report.setBackground( navcolor);
     }//GEN-LAST:event_reportMouseExited
 
     private void logoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseEntered
@@ -216,7 +216,7 @@ public class settingpage extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_logoutMouseEntered
 
     private void logoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseExited
-         logout.setBackground(headcolor);
+         logout.setBackground( navcolor);
     }//GEN-LAST:event_logoutMouseExited
 
     private void logoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseClicked
