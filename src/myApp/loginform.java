@@ -3,6 +3,7 @@ package myApp;
 
 
 import internalpage.project;
+import internalpage.regform;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import javax.swing.BorderFactory;
@@ -70,6 +71,8 @@ public class loginform extends javax.swing.JFrame {
         minimize = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        login1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -174,6 +177,25 @@ public class loginform extends javax.swing.JFrame {
         jLabel7.setText("WELCOME");
         jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 140, -1));
 
+        login1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        login1.setText("Register");
+        login1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                login1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(login1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 110, -1));
+
+        jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("DON'T HAVE AND ACCOUNT? CLICK REGISTER");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
+
         jPanel1.add(jPanel4);
         jPanel4.setBounds(320, 0, 440, 420);
 
@@ -256,6 +278,18 @@ public class loginform extends javax.swing.JFrame {
         proj.setVisible(true);
     }//GEN-LAST:event_loginMouseClicked
 
+    private void login1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_login1ActionPerformed
+         regform rf = new regform(); 
+        this.dispose();
+        rf.setVisible(true);
+    }//GEN-LAST:event_login1ActionPerformed
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+       regform rf = new regform(); 
+        this.dispose();
+        rf.setVisible(true);
+    }//GEN-LAST:event_jLabel6MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -299,11 +333,13 @@ public class loginform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel login;
+    private javax.swing.JButton login1;
     private javax.swing.JLabel minimize;
     private javax.swing.JTextField password;
     private javax.swing.JTextField username;

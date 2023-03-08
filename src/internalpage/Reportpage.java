@@ -152,7 +152,7 @@ public class Reportpage extends javax.swing.JFrame {
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 70, 50));
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(0, 0, 650, 60);
+        jPanel3.setBounds(0, 0, 640, 60);
 
         rDelete.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         rDelete.setText("DELETE");
@@ -162,7 +162,7 @@ public class Reportpage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(rDelete);
-        rDelete.setBounds(220, 60, 90, 26);
+        rDelete.setBounds(220, 60, 90, 27);
 
         tableReport.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         tableReport.setModel(new javax.swing.table.DefaultTableModel(

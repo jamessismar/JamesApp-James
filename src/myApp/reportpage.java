@@ -35,7 +35,6 @@ public class reportpage extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
         login = new javax.swing.JButton();
         password = new javax.swing.JTextField();
         username = new javax.swing.JTextField();
@@ -45,11 +44,6 @@ public class reportpage extends javax.swing.JInternalFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 255, 0));
         jPanel1.setLayout(null);
-
-        jPanel3.setBackground(new java.awt.Color(204, 255, 255));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jPanel3);
-        jPanel3.setBounds(0, 0, 650, 60);
 
         login.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         login.setText("LOGIN");
@@ -64,7 +58,7 @@ public class reportpage extends javax.swing.JInternalFrame {
             }
         });
         jPanel1.add(login);
-        login.setBounds(260, 310, 90, 30);
+        login.setBounds(270, 250, 90, 30);
 
         password.setBackground(new java.awt.Color(230, 233, 235));
         password.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -76,7 +70,7 @@ public class reportpage extends javax.swing.JInternalFrame {
             }
         });
         jPanel1.add(password);
-        password.setBounds(160, 250, 290, 50);
+        password.setBounds(170, 190, 290, 50);
 
         username.setBackground(new java.awt.Color(230, 233, 235));
         username.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -88,24 +82,24 @@ public class reportpage extends javax.swing.JInternalFrame {
             }
         });
         jPanel1.add(username);
-        username.setBounds(160, 190, 290, 50);
+        username.setBounds(170, 130, 290, 50);
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ADMIN");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(210, 80, 190, 60);
+        jLabel1.setBounds(220, 40, 190, 60);
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/rp-report.png"))); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(180, 120, 70, 50);
+        jLabel3.setBounds(180, 60, 70, 50);
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("REPORT");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(210, 120, 190, 60);
+        jLabel2.setBounds(220, 70, 190, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,7 +139,6 @@ public class reportpage extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JButton login;
     private javax.swing.JTextField password;
     private javax.swing.JTextField username;
