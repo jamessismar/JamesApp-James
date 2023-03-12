@@ -23,7 +23,7 @@ public class regform extends javax.swing.JFrame {
      */
     public regform() {
         initComponents();
-         setLocationRelativeTo(null); 
+        setLocationRelativeTo(null); 
     }
     Color hover = new Color(0,255,153);
     Color defbutton = new Color(102,255,102);
@@ -38,9 +38,10 @@ public class regform extends javax.swing.JFrame {
     
     
     }
+    
      void buttonDefaultColor(JPanel panel){
-     panel.setBackground(defbutton);
-        panel.setBorder(empty);
+    panel.setBackground(defbutton);
+    panel.setBorder(empty);
                 }
      Color headcolor = new Color(0,255,153);
      Color bodycolor = new Color(102,255,102);
@@ -79,7 +80,7 @@ public class regform extends javax.swing.JFrame {
         search5 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(102, 255, 102));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -261,6 +262,7 @@ public class regform extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked

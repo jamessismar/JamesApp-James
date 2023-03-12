@@ -10,26 +10,16 @@ import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 
-/**
- *
- * @author James
- */
 public class loginform extends javax.swing.JFrame {
 
-    /**
-     * Creates new form loginform
-     */
+    
     public loginform() {
         initComponents();
        setLocationRelativeTo(null); 
        
     }
-    Color hover = new Color(0,255,153);
+    Color hover = new Color(102,204,255);
     Color defbutton = new Color(102,255,102);
     
     Border empty = BorderFactory.createEmptyBorder();
@@ -42,6 +32,7 @@ public class loginform extends javax.swing.JFrame {
     
     
     }
+    
     void buttonDefaultColor(JPanel panel){
     panel.setBackground(defbutton);
     panel.setBorder(empty);
@@ -78,7 +69,7 @@ public class loginform extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
 
         jPanel1.setLayout(null);
@@ -148,7 +139,7 @@ public class loginform extends javax.swing.JFrame {
                 jLabel4MouseClicked(evt);
             }
         });
-        login.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 120, 40));
+        login.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 80, 40));
 
         jPanel4.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 140, 40));
 
@@ -231,6 +222,7 @@ public class loginform extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed

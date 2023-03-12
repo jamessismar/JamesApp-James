@@ -130,6 +130,7 @@ public class reportpage extends javax.swing.JInternalFrame {
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
        Reportpage rp = new Reportpage();
+       
         rp.setVisible(true);
     }//GEN-LAST:event_loginMouseClicked
 

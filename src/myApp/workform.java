@@ -80,7 +80,7 @@ public class workform extends javax.swing.JFrame {
         search4 = new javax.swing.JTextField();
         search5 = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
 
         jPanel2.setBackground(new java.awt.Color(102, 255, 102));

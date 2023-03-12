@@ -191,6 +191,7 @@ public class userpage extends javax.swing.JInternalFrame {
 
     private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
         workform wff = new workform();
+        this.dispose();
         wff.setVisible(true);
         
     }//GEN-LAST:event_addMouseClicked

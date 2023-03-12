@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package myApp;
+import internalpage.Reportpage;
 import internalpage.settingpage;
 import java.awt.Color;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -84,6 +85,9 @@ public class dashboardpage extends javax.swing.JInternalFrame {
         report.setBackground(new java.awt.Color(102, 204, 255));
         report.setPreferredSize(new java.awt.Dimension(160, 160));
         report.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                reportMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 reportMouseEntered(evt);
             }
@@ -164,7 +168,7 @@ public class dashboardpage extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_manageuserMouseEntered
 
     private void manageuserMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageuserMouseExited
-        manageuser.setBackground(headcolor);
+        manageuser.setBackground(navcolor);
     }//GEN-LAST:event_manageuserMouseExited
 
     private void reportMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reportMouseEntered
@@ -172,7 +176,7 @@ public class dashboardpage extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_reportMouseEntered
 
     private void reportMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reportMouseExited
-        report.setBackground(headcolor);
+        report.setBackground(navcolor);
     }//GEN-LAST:event_reportMouseExited
 
     private void settingsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsMouseEntered
@@ -181,7 +185,7 @@ public class dashboardpage extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_settingsMouseEntered
 
     private void settingsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsMouseExited
-        settings.setBackground(headcolor);
+        settings.setBackground(navcolor);
     }//GEN-LAST:event_settingsMouseExited
 
     private void settingsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsMouseClicked
@@ -189,6 +193,12 @@ public class dashboardpage extends javax.swing.JInternalFrame {
      set.setVisible(true);
       
     }//GEN-LAST:event_settingsMouseClicked
+
+    private void reportMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reportMouseClicked
+        reportpage rpp = new reportpage();
+        this.dispose();
+        rpp.setVisible(true);
+    }//GEN-LAST:event_reportMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
