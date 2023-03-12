@@ -298,9 +298,12 @@ public class Reportpage extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-       reportpage  rp = new reportpage ();
+      // reportpage  rp = new reportpage ();
+       // this.dispose();
+       //rp.setVisible(true);    
+       project pr = new project();
+        pr.setVisible(true);
         this.dispose();
-       rp.setVisible(true);       
     }//GEN-LAST:event_jLabel2MouseClicked
 
     /**

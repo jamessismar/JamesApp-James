@@ -4,6 +4,7 @@
  */
 package myApp;
 
+import internalpage.project;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import javax.swing.BorderFactory;
@@ -79,6 +80,8 @@ public class workform extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         search4 = new javax.swing.JTextField();
         search5 = new javax.swing.JTextField();
+        back = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -141,7 +144,7 @@ public class workform extends javax.swing.JFrame {
         jLabel3.setText("ADD");
         add.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 50, 40));
 
-        jPanel2.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 70, 40));
+        jPanel2.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 70, 40));
 
         edit.setBackground(new java.awt.Color(102, 255, 255));
         edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -160,7 +163,7 @@ public class workform extends javax.swing.JFrame {
         jLabel4.setText("EDIT");
         edit.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 50, 40));
 
-        jPanel2.add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 70, 40));
+        jPanel2.add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 70, 40));
 
         delete.setBackground(new java.awt.Color(102, 255, 255));
         delete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -179,7 +182,7 @@ public class workform extends javax.swing.JFrame {
         jLabel5.setText("DELETE");
         delete.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 50, 40));
 
-        jPanel2.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 70, 40));
+        jPanel2.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 70, 40));
 
         search.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         search.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -295,6 +298,28 @@ public class workform extends javax.swing.JFrame {
         });
         jPanel2.add(search5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, 200, 20));
 
+        back.setBackground(new java.awt.Color(102, 255, 255));
+        back.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                backMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                backMouseExited(evt);
+            }
+        });
+        back.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("BACK");
+        back.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 50, 40));
+
+        jPanel2.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 70, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -374,6 +399,20 @@ public class workform extends javax.swing.JFrame {
         setState(ICONIFIED);
     }//GEN-LAST:event_jLabel15MouseClicked
 
+    private void backMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backMouseEntered
+
+    private void backMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backMouseExited
+
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+      project pr = new project();
+        pr.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_backMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -411,6 +450,7 @@ public class workform extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel add;
+    private javax.swing.JPanel back;
     private javax.swing.JPanel delete;
     private javax.swing.JPanel edit;
     private javax.swing.JComboBox<String> jComboBox1;
@@ -426,6 +466,7 @@ public class workform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;

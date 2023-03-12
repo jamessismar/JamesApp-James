@@ -5,6 +5,8 @@
 package myApp;
 
 import internalpage.Reportpage;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 
@@ -129,9 +131,10 @@ public class reportpage extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_passwordActionPerformed
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
-       Reportpage rp = new Reportpage();
-       
-        rp.setVisible(true);
+      JFrame mainFrame = (JFrame)SwingUtilities.getWindowAncestor(this);
+        mainFrame.dispose();
+        Reportpage rpp = new Reportpage();
+        rpp.setVisible(true);
     }//GEN-LAST:event_loginMouseClicked
 
 
